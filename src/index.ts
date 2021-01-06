@@ -35,9 +35,12 @@ const scrape = async (url: string, cssSelector: string): Promise<string | null |
  * and posting its result
  */
 const main = async (): Promise<void> => {
+    // Prepare our variables
     const url: string = 'https://www.google.com';
     const cssSelector: string = 'form input[type=submit]';
+    // Run the Crawler
     const scrapeResult: string | null | undefined = await scrape(url, cssSelector);
+    // Print the parameters + result
     console.log('---------------------');
     console.log(`Crawling URL: '${url}'`);
     console.log(`CSS Selector : '${cssSelector}'`);
